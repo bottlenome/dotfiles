@@ -30,7 +30,7 @@ if &compatible
   set nocompatible               " Be iMproved
 endif
 
-let s:dein_dir = '${HOME}/.vim/dein'
+let s:dein_dir = $HOME . '/.vim/dein'
 let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
 if !isdirectory(s:dein_repo_dir)
   call system('git clone https://github.com/Shougo/dein.vim ' . shellescape(s:dein_repo_dir))
@@ -39,12 +39,12 @@ endif
 let &runtimepath = s:dein_repo_dir .",". &runtimepath
 
 " Required:
-if dein#load_state('${HOME}/.vim/dein')
-  call dein#begin('${HOME}/.vim/dein')
+if dein#load_state(s:dein_dir)
+  call dein#begin(s:dein_dir)
 
   " Let dein manage dein
   " Required:
-  call dein#add('${HOME}/.dein/repos/github.com/Shougo/dein.vim')
+  call dein#add(s:dein_repo_dir)
 
   " Add or remove your plugins here:
   call dein#add('Shougo/neosnippet.vim')
