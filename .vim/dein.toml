@@ -1,0 +1,8 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo = 'scrooloose/syntastic'
+hook_add ='''
+source ~/.config/vim/plugins/syntastic.rc.vim
+'''
