@@ -81,6 +81,7 @@ endif
 "End dein Scripts-------------------------
 
 "neocomplete
+  let g:neocomplete#enable_auto_close_preview = 1
   let g:neocomplete#enable_at_startup = 1
   let g:neocomplete#enable_ignore_case = 1
   let g:neocomplete#enable_smart_case = 1
