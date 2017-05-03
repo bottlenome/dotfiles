@@ -49,7 +49,7 @@ if dein#load_state(s:dein_dir)
   " Add or remove your plugins here:
   call dein#add('Shougo/neosnippet.vim')
   call dein#add('Shougo/neosnippet-snippets')
-  call dein#add('scrooloose/syntastic')
+  " call dein#add('scrooloose/syntastic')
   call dein#add('Shougo/neocomplete.vim', {
         \ 'if': has('lua')
         \ })
@@ -87,6 +87,7 @@ endif
     let g:neocomplete#keyword_patterns = {}
   endif
   let g:neocomplete#keyword_patterns._ = '\h\w*'
+  let g:neocomplete#enable_auto_close_preview = 1
 "neocomplcache
   let g:neocomplcache_enable_at_startup = 1
   let g:neocomplcache_enable_ignore_case = 1
