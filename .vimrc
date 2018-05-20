@@ -34,6 +34,7 @@ let s:dein_dir = $HOME . '/.vim/dein'
 let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
 if !isdirectory(s:dein_repo_dir)
   call system('git clone https://github.com/Shougo/dein.vim ' . shellescape(s:dein_repo_dir))
+  call system('cd ' . shellescape(s:dein_repo_dir) . '; git checkout refs/tags/1.5')
 endif
 " Required:
 let &runtimepath = s:dein_repo_dir .",". &runtimepath
