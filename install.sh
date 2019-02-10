@@ -4,6 +4,7 @@ for f in .??*
 do
   [[ "$f" == ".git" ]] && continue
   [[ "$f" == ".DS_Store" ]] && continue
+  [[ "$f" == ".bashrc" ]] && cat .bashrc >> ${HOME}/.bashrc && continue
   output=${HOME}/$f
   if [ -L $output ]; then
     echo "delete link $output"
