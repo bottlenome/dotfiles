@@ -61,6 +61,7 @@ if dein#load_state(s:dein_dir)
   " You can specify revision/branch/tag.
   call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
   call dein#add('fatih/vim-go')
+  call dein#add('mattn/sonictemplate-vim')
 
   call dein#load_toml('~/.vim/dein.toml', {'lazy': 0})
   call dein#load_toml('~/.vim/dein_lazy.toml', {'lazy': 1})
@@ -104,6 +105,10 @@ endif
 "neosnippet
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"
+
+"sonictemplate {{{
+let g:sonictemplate_vim_template_dir = ['~/.vim/template']
+" }}}}
 
 imap <C-k> <Plug>(neosnippet_expand_or_jump)
 smap <C-k> <Plug>(neosnippet_expand_or_jump)
