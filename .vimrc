@@ -62,6 +62,10 @@ if dein#load_state(s:dein_dir)
   call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
   call dein#add('fatih/vim-go')
   call dein#add('mattn/sonictemplate-vim')
+  " need installation below
+  " $ gem install redcarpet pygments.rb
+  " $ npm -g install instant-markdown-d
+  call dein#add('suan/vim-instant-markdown')
 
   call dein#load_toml('~/.vim/dein.toml', {'lazy': 0})
   call dein#load_toml('~/.vim/dein_lazy.toml', {'lazy': 1})
