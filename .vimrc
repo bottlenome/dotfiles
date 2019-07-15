@@ -125,3 +125,5 @@ imap <expr><TAB> neosnippet#jumpable() ?
 smap <expr><TAB> neosnippet#jumpable() ?
 \ "\<Plug>(neosnippet_expand_or_jump)"
 \: "\<TAB>"
+
+map <C-]> g<C-]>
