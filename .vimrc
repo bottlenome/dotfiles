@@ -25,6 +25,8 @@ set hlsearch
 set statusline=%F\ %03l\ %03v
 set laststatus=2
 
+let $BASH_ENV="~/.bash_aliases"
+
 "dein Scripts-----------------------------
 if &compatible
   set nocompatible               " Be iMproved
