@@ -1,0 +1,14 @@
+snippet     argparse
+abbr        import argparse
+options     indent
+	import argparse
+
+	parser = argparse.ArgumentParser()
+	parser.add_argument('--gpu', type=str, default="1")
+	parser.add_argument('--dataset', type=str, default="imagenet")
+	parser.add_argument('--data_size', type=int, default=4000)
+	parser.add_argument('--data_dir', type=str, default="./data/train_datas")
+	parser.add_argument('--batch_size', type=int, default=5)
+	parser.add_argument('--epoch', type=int, default=101)
+	parser.add_argument('--search_size', type=int, default=10)
+	args = parser.parse_args()

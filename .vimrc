@@ -67,7 +67,7 @@ if dein#load_state(s:dein_dir)
   " need installation below
   " $ gem install redcarpet pygments.rb
   " $ npm -g install instant-markdown-d
-  call dein#add('suan/vim-instant-markdown')
+  " call dein#add('suan/vim-instant-markdown')
 
   call dein#load_toml('~/.vim/dein.toml', {'lazy': 0})
   call dein#load_toml('~/.vim/dein_lazy.toml', {'lazy': 1})
@@ -111,10 +111,13 @@ endif
 "neosnippet
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"
+let g:neosnippet#snippets_directory = '~/.vim/my_neosnippets'
 
 "sonictemplate {{{
 let g:sonictemplate_vim_template_dir = ['~/.vim/template']
 " }}}}
+
+
 
 imap <C-k> <Plug>(neosnippet_expand_or_jump)
 smap <C-k> <Plug>(neosnippet_expand_or_jump)
