@@ -17,3 +17,8 @@ snippet     list_comprehension
 abbr        [i for i in range(10) if i % 2 == 0]
 options     indent
     [i for i in range(10) if i % 2 == 0]
+
+snippet     list_comprehension_else
+abbr        [i if i % 2 == 0 else "odd" for i in range(10)]
+options     indent
+    [i if i % 2 == 0 else "odd" for i in range(10)]
