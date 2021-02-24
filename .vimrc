@@ -15,6 +15,7 @@ set backspace=indent,eol,start
 autocmd FileType * setlocal omnifunc=syntaxcomplete#Complete
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType make set noexpandtab
+autocmd FileType neosnippet set noexpandtab
 highlight Pmenu ctermbg=4
 highlight PmenuSet ctermbg=1
 highlight PmenuSbar ctermbg=4

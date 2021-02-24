@@ -12,3 +12,8 @@ options     indent
 	parser.add_argument('--epoch', type=int, default=101)
 	parser.add_argument('--search_size', type=int, default=10)
 	args = parser.parse_args()
+
+snippet     list_comprehension
+abbr        [i for i in range(10) if i % 2 == 0]
+options     indent
+    [i for i in range(10) if i % 2 == 0]
