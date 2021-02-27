@@ -22,3 +22,7 @@ snippet     list_comprehension_else
 abbr        [i if i % 2 == 0 else "odd" for i in range(10)]
 options     indent
     [i if i % 2 == 0 else "odd" for i in range(10)]
+
+snippet     pytorch_zero
+options     indent
+    x = torch.empty(10, 3, 512, 512)
