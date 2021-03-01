@@ -1,0 +1,27 @@
+snippet     log_wrapper
+options     head
+    #ifndef LOG_WRAPPER_H__
+    #define LOG_WRAPPER_H__
+    
+    #include <syslog.h>
+    #include <stdio.h>
+
+    #ifdef M_LOG_SYSLOG
+    #define WRAP_LOG(priority, ...) \
+            syslog(priority, __VA_ARGS__)
+    #else
+    #define WRAP_LOG(priority, ...) \
+            fprintf(stdout, "[%d] ", priority); \
+            fprintf(stdout, __VA_ARGS__)
+    #endif
+
+    #define ${1:#:M}LOG_ERROR(...) \
+            WRAP_LOG(LOG_ERR, __VA_ARGS__)
+    #define $1LOG_WARN(...) \
+            WRAP_LOG(LOG_WARNING, __VA_ARGS__)
+    #define $1LOG_INFO(...) \
+            WRAP_LOG(LOG_INFO, __VA_ARGS__)
+    #define $1LOG_DEBUG(...) \
+            WRAP_LOG(LOG_DEBUG, __VA_ARGS__)
+    
+    #endif // LOG_WRAPPER_H__
