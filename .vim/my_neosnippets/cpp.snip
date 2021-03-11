@@ -86,3 +86,8 @@ options     head
     std::unique_ptr<T> make_unique( Args&& ...args ) {
         return std::unique_ptr<T>( new T( std::forward<Args>(args)... ) );
     }
+
+snippet     stof
+options     head
+    #include <string>
+    std::stof(${1});
