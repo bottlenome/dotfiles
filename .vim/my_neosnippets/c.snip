@@ -25,3 +25,7 @@ options     head
             WRAP_LOG(LOG_DEBUG, __VA_ARGS__)
     
     #endif // LOG_WRAPPER_H__
+
+snippet     sleep
+    // #include <unistd.h>
+    usleep(${1:#:1 * 1000});
