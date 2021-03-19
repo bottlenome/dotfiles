@@ -91,3 +91,11 @@ snippet     stof
 options     head
     #include <string>
     std::stof(${1});
+
+snippet     profile
+options     head
+    #include <chrono>
+    auto start = std::chrono::system_clock::now();
+    auto end = std::chrono::system_clock::now();
+    double dulation = std::chrono::duration_cast<std::chrono::milliseconds>(end-start).count();
+    std::cout << dulation << "ms" << std::endl;
