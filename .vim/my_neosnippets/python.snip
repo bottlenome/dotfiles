@@ -26,3 +26,20 @@ options     indent
 snippet     pytorch_zero
 options     indent
     x = torch.empty(10, 3, 512, 512)
+
+snippet     profile
+options     indent
+	# import time
+	start = time.perf_counter()
+
+	end = time.perf_counter()
+	print("{} ms".format((end - start) * 1000))
+
+snippet     profile_func
+options     indent
+	# import time
+	def profile(func):
+		start = time.perf_counter()
+		func()
+		end = time.perf_counter()
+		print("{}, {} ms".format(str(func), (end - start) * 1000))
