@@ -119,8 +119,7 @@ let g:sonictemplate_vim_template_dir = ['~/.vim/template']
 " }}}}
 
 "vim-go
-"let g:go_version_warning = 0
-
+let g:go_version_warning = 0
 
 imap <C-k> <Plug>(neosnippet_expand_or_jump)
 smap <C-k> <Plug>(neosnippet_expand_or_jump)
